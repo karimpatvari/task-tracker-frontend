@@ -16,7 +16,7 @@ submitTaskCreationBtn.addEventListener("click", (e) => {
 
 async function getTasks() {
     try {
-        const response = await fetch(`http://localhost:8080/tasks`, {
+        const response = await fetch(`http://3.90.86.198:8080/tasks`, {
             method: "GET",
             headers: {
                 "Authorization": getAuthorizationToken(),  // Ensure this token is correct
@@ -44,7 +44,7 @@ async function getTasks() {
 
 async function completeTask(taskId) {
     try {
-        const response = await fetch(`http://localhost:8080/tasks/complete`, {
+        const response = await fetch(`http://3.90.86.198:8080/tasks/complete`, {
             method: "POST",
             headers: {
                 "Authorization": getAuthorizationToken(),  // Ensure this token is correct
@@ -64,7 +64,7 @@ async function completeTask(taskId) {
 
 async function uncompleteTask(taskId) {
     try {
-        const response = await fetch(`http://localhost:8080/tasks/uncomplete`, {
+        const response = await fetch(`http://3.90.86.198:8080/tasks/uncomplete`, {
             method: "POST",
             headers: {
                 "Authorization": getAuthorizationToken(),  // Ensure this token is correct
@@ -84,7 +84,7 @@ async function uncompleteTask(taskId) {
 
 async function updateTask(taskId, title, text) {
     try {
-        const response = await fetch(`http://localhost:8080/tasks/update`, {
+        const response = await fetch(`http://3.90.86.198:8080/tasks/update`, {
             method: "POST",
             headers: {
                 "Authorization": getAuthorizationToken(),  // Ensure this token is correct
@@ -108,7 +108,7 @@ async function updateTask(taskId, title, text) {
 
 async function deleteTask(taskId) {
     try {
-        const response = await fetch(`http://localhost:8080/tasks/delete`, {
+        const response = await fetch(`http://3.90.86.198:8080/tasks/delete`, {
             method: "POST",
             headers: {
                 "Authorization": getAuthorizationToken(),  // Ensure this token is correct
@@ -128,7 +128,7 @@ async function deleteTask(taskId) {
 
 async function createTask(title, text) {
     try {
-        const response = await fetch(`http://localhost:8080/tasks/create`, {
+        const response = await fetch(`http://3.90.86.198:8080/tasks/create`, {
             method: "POST",
             headers: {
                 "Authorization": getAuthorizationToken(),  // Ensure this token is correct
@@ -159,7 +159,7 @@ async function createTask(title, text) {
 
 async function getTasksSummary() {
     try {
-        const response = await fetch(`http://localhost:8080/tasks/summary`, {
+        const response = await fetch(`http://3.90.86.198:8080/tasks/summary`, {
             method: "GET",
             headers: {
                 "Authorization": getAuthorizationToken(),  // Ensure this token is correct

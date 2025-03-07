@@ -1,6 +1,6 @@
 function getAuthorizationToken() {
     return localStorage.getItem("authToken");
-};
+}
 
 // UI Elements
 const registrationButton = document.querySelector("#registrationBtn");
@@ -123,7 +123,7 @@ async function handleRegistration() {
     }
 
     try {
-        const response = await fetch("http://localhost:8080/user", {
+        const response = await fetch("http://3.90.86.198:8080/user", {
             method: "POST",
             headers: {"Content-Type": "application/json"},
             body: JSON.stringify({email, password, firstName, lastName})
@@ -155,7 +155,7 @@ async function handleLogin() {
     const email = document.getElementById("loginEmail").value;
     const password = document.getElementById("loginPassword").value;
     try {
-        const response = await fetch("http://localhost:8080/auth/login", {
+        const response = await fetch("http://3.90.86.198:8080/auth/login", {
             method: "POST",
             headers: {"Content-Type": "application/json"},
             body: JSON.stringify({email, password})
@@ -183,7 +183,7 @@ async function handleLogin() {
 
 async function fetchUser() {
     try {
-        const response = await fetch("http://localhost:8080/user", {
+        const response = await fetch("http://3.90.86.198:8080/user", {
             method: "GET",
             headers: {"Authorization": getAuthorizationToken()}
         });
